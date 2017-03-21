@@ -39,6 +39,7 @@
     _cardSwitch.models = models;
     _cardSwitch.delegate = self;
     [self.view addSubview:_cardSwitch];
+    
 }
 
 -(void)XLCardSwitchDidSelectedAt:(NSInteger)index

@@ -2,4 +2,86 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x4ee3;&#x7801;&#x6574;&#x5408;/Class/VC/ImageCopVC.m"
+            timestampString = "510510614.974446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "-didTapImageView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x4ee3;&#x7801;&#x6574;&#x5408;/Class/VC/ImageCopVC.m"
+            timestampString = "510510669.513816"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "-imagePickerControllerDidCancel:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x4ee3;&#x7801;&#x6574;&#x5408;/Class/VC/ImageCopVC.m"
+            timestampString = "510510683.935936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-cropViewController:didCropToImage:withRect:angle:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ImageCopVC cropViewController:didCropToImage:withRect:angle:]"
+                  moduleName = "&#x4ee3;&#x7801;&#x6574;&#x5408;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/greatrong/Downloads/%E4%BB%A3%E7%A0%81%E6%95%B4%E5%90%88/%E4%BB%A3%E7%A0%81%E6%95%B4%E5%90%88/Class/VC/ImageCopVC.m"
+                  timestampString = "510564879.794416"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "811">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__63-[ImageCopVC cropViewController:didCropToImage:withRect:angle:]_block_invoke"
+                  moduleName = "&#x4ee3;&#x7801;&#x6574;&#x5408;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/greatrong/Downloads/%E4%BB%A3%E7%A0%81%E6%95%B4%E5%90%88/%E4%BB%A3%E7%A0%81%E6%95%B4%E5%90%88/Class/VC/ImageCopVC.m"
+                  timestampString = "510564879.795716"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

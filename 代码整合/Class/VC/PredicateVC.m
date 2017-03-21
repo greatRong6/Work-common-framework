@@ -21,13 +21,13 @@
     [super viewDidLoad];
     
     //熟悉Predicate
-    [self testPredicateDefinition];
+//    [self testPredicateDefinition];
     
     //学习Predicate的比较功能
-    //[self testPredicateComparation];
+//    [self testPredicateComparation];
     
     //学习Predicate范围运算功能
-    //[self testPredicateRange];
+    [self testPredicateRange];
     
     //学习Predicate 与自身相比的功能
     //[self testPredicateComparationToSelf];
@@ -36,7 +36,7 @@
     //[self testPredicateRelateToNSString];
     
     //学习Predicate 的通配
-//    [self testPredicateWildcard];
+    //[self testPredicateWildcard];
 
     
     // Do any additional setup after loading the view.
@@ -83,6 +83,7 @@
 
 #pragma  mark Predicate 与自身相比的功能
 - (void)testPredicateComparationToSelf{
+    
     /*
      (3)字符串本身:SELF
      例：@“SELF == ‘APPLE’"
@@ -104,14 +105,18 @@
      例：@"number BETWEEN {1,5}"
      @"address IN {'shanghai','beijing'}"
      */
-    NSArray *array = [NSArray arrayWithObjects:@1,@2,@3,@4,@5,@2,@6, nil];
+    
+//    NSArray *array = [NSArray arrayWithObjects:@1,@2,@3,@4,@5,@2,@6, nil];
+    
+    NSArray *array = [NSArray arrayWithObjects:@"shanghai",@"beijing", nil];
+    
     //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF in {2,5}"]; 找到 in 的意思是array中{2,5}的元素
+    
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF BETWEEN {2,5}"];
     NSArray *fliterArray = [array filteredArrayUsingPredicate:predicate];
     [fliterArray enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"fliterArray = %@",obj);
     }];
-    
     
 }
 
@@ -134,8 +139,8 @@
 - (void)testPredicateDefinition{
     
     NSArray *array = [[NSArray alloc] initWithObjects:@"beijing",@"shanghai",@"guangzou",@"wuhan", nil];;
-    //表示在数组里面筛选还有@"be"的字符串
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",@"be"];
+    //表示在数组里面查询还有@"be"的字符串
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",@"sh"];
     NSArray *temp = [array filteredArrayUsingPredicate:predicate];
     [temp enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"temp = %@",obj);
@@ -143,9 +148,11 @@
     
     /***************************************************************/
     //NSPredicate给我留下最深印象的是两个数组求交集的一个需求，如果按照一般写法，需要2个遍历，但NSArray提供了一个filterUsingPredicate的方法，用了NSPredicate，就可以不用遍历！
+    
     NSArray *array1 = [NSArray arrayWithObjects:@1,@2,@3,@5,@5,@6,@7, nil];
     NSArray *array2 = [NSArray arrayWithObjects:@4,@5, nil];
-    // 表示筛选array1在array2中的元素!YES！其中SELF指向filteredArrayUsingPredicate的调用者。
+    
+    // 表示筛选array1在array2中的元素!YES！其中SELF指向filteredArrayUsingPredicate的调用者。     筛选两个数组中相同的元素
     /*测试方案：
      NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"SELF  in %@",array2];
      NSArray *temp1 = [array1 filteredArrayUsingPredicate:predicate1];
@@ -165,6 +172,7 @@
     [temp1 enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"temp1 = %@",obj);
     }];
+    
     
     /*
      2015-11-08 10:55:19.879 NSPredicateDemo[11595:166012] obj ==5
